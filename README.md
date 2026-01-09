@@ -1,30 +1,82 @@
-# Portfolio website
+﻿<div align="center">
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+# Salwyn Christopher — Portfolio
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/salwyncs-projects/v0-portfolio-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/jS2KPzW4gIR)
+[![Next.js](https://img.shields.io/badge/Next.js-16-000?logo=nextdotjs)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06b6d4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![License](https://img.shields.io/badge/License-MIT-555)](#)
 
-## Overview
+</div>
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+> A polished, accessible, and fast personal portfolio showcasing projects, experience, skills, and certifications with a beautiful dark mode and smooth animations.
 
-## Deployment
+---
 
-Your project is live at:
+##  Features
 
-**[https://vercel.com/salwyncs-projects/v0-portfolio-website](https://vercel.com/salwyncs-projects/v0-portfolio-website)**
+- Dark mode with accessible contrast and smooth theme transitions
+- Animated hero, typing roles, and interactive gradient background
+- Projects with modals, tech badges, and rich previews
+- Certifications, experience, education, skills, and contact sections
+- Reusable UI system (buttons, inputs, cards, select, badges)
+- Strong focus states and keyboard navigation (a11y)
+- Modern color system using OKLCH variables
 
-## Build your app
+##  Tech Stack
 
-Continue building your app on:
+- Framework: Next.js 16, React 19, TypeScript
+- Styling: Tailwind CSS 4, CSS variables, utility classes
+- Animations: Framer Motion
+- Theming: next-themes
+- Icons: Lucide
 
-**[https://v0.app/chat/jS2KPzW4gIR](https://v0.app/chat/jS2KPzW4gIR)**
+##  Getting Started
 
-## How It Works
+Prerequisites: Node 20+ and pnpm
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```bash
+pnpm install
+pnpm dev
+```
+
+Then open http://localhost:3000.
+
+For a production build:
+
+```bash
+pnpm build
+pnpm start
+```
+
+##  Project Structure
+
+```
+app/            # Next.js app router pages and global styles
+components/     # UI primitives and sections
+hooks/          # Custom hooks
+lib/            # Data and utilities
+public/         # Static assets
+```
+
+##  Configuration
+
+- Theme Provider and CSS variables live in app/globals.css and components/theme-provider.tsx.
+- Section components are in components/sections/*.
+- Common UI is under components/ui/*.
+
+##  Deployment
+
+This project is deployment-ready on Vercel or any Node host.
+
+```bash
+# Example: build output
+pnpm build
+# Run production server
+pnpm start
+```
+
+##  License
+
+MIT — feel free to use and adapt. Attribution is appreciated.
