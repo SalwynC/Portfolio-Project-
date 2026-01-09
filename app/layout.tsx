@@ -8,6 +8,21 @@ import { AnimatedBackground } from "@/components/animated-background"
 import { PageLoader } from "@/components/page-loader"
 import "./globals.css"
 
+const styles = `
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  body.content-visible {
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+`
+
 const _inter = Inter({ subsets: ["latin"] })
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 
@@ -59,7 +74,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body className="font-sans antialiased transition-colors duration-200 bg-background text-foreground">
+      <head>
+        <style>{styles}</style>
+      </head>
+      <body className="font-sans antialiased transition-colors duration-200 bg-background text-foreground" style={{ opacity: 0 }}>
         <PageLoader />
         <ThemeProvider attribute="class" defaultTheme="dark">
           <AnimatedBackground />

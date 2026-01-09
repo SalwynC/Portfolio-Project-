@@ -16,6 +16,8 @@ export function PageLoader() {
     // Show loader for 3.5 seconds
     const timer = setTimeout(() => {
       setIsVisible(false)
+      // Trigger content fade-in animation
+      document.body.classList.add('content-visible')
       // Re-enable scroll
       document.documentElement.style.overflow = 'auto'
       document.body.style.overflow = 'auto'
